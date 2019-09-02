@@ -2,7 +2,7 @@
  * Pipe sort like es6
  * @param fn
  */
-import { DeepAssign } from '../../helpers/clone.helper'
+import { DeepAssign } from '../helpers/clone.helper'
 
 export const Sort = (fn) => d => {
 	const ori = DeepAssign(d)

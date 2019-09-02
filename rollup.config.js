@@ -21,9 +21,9 @@ export default [
 		'src/bucket/**'
 	),
 	RollupConfig(
-		'./src/bucket/pipes/index.ts',
+		'./src/pipes/index.ts',
 		'dist/pipes.js',
-		'src/bucket/pipes/**'
+		'src/pipes/**'
 	),
 	RollupConfig(
 		'./src/mixins/index.ts',

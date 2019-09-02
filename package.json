@@ -1,5 +1,5 @@
 {
-  "name": "aether.js",
+  "name": "aether-js",
   "description": "Collections helper & mixins for javascript developer",
   "version": "1.0.0",
   "main": "bucket.js",
