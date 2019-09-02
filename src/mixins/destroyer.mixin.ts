@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs'
 
-export interface IDestroyerAMX {
+export interface IDestroyerMX {
 	_destroyed?: boolean
 	_subscriber: Observable<any>[]
 }
