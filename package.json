@@ -1,0 +1,30 @@
+{
+  "name": "aether.js",
+  "description": "Collections helper & mixins for javascript developer",
+  "version": "1.0.0",
+  "main": "bucket.js",
+  "author": "Jimmy <jackzard@yahoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "dev": "rollup -cw",
+    "submit": "make publish"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.16",
+    "rxjs": "^6.5.2",
+    "uuid-random": "^1.0.9"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "rollup": "^1.20.3",
+    "rollup-plugin-typescript2": "^0.24.0",
+    "typescript": "^3.6.2",
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
