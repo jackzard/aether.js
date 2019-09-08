@@ -12,7 +12,7 @@ const RollupConfig = (input, output, watch) => {
 export default [
 	RollupConfig(
 		'./src/helpers/index.ts',
-		'dist/helper.js',
+		'dist/helpers.js',
 		'src/helpers/**'
 	),
 	RollupConfig(
