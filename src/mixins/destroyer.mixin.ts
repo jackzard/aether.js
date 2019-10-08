@@ -2,7 +2,7 @@ import { Observable, Subscription } from 'rxjs'
 
 export interface IDestroyerMX {
 	_destroyed?: boolean
-	_subscriber: Subscription[]
+	_subscriber: Subscription[] | any[]
 }
 
 /**
