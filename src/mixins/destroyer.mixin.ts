@@ -1,8 +1,8 @@
-import { Observable } from 'rxjs'
+import { Observable, Subscription } from 'rxjs'
 
 export interface IDestroyerMX {
 	_destroyed?: boolean
-	_subscriber: Observable<any>[]
+	_subscriber: Subscription[]
 }
 
 /**
@@ -30,5 +30,11 @@ export function Destroyer(destroy_name: string) {
 	}
 }
 
-export const DestroyerNG = Destroyer('ngOnDestroy')
-export const DestroyerReact = Destroyer('componentWillUnmount')
+export function DestroyerNG() {
+	return Destroyer('ngOnDestroy')
+}
+
+export function DestroyerReact() {
+	return Destroyer('componentWillUnmount')
+}
+
