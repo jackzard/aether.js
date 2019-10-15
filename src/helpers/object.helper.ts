@@ -35,3 +35,15 @@ export const NS = (obj: any, path: string, value: any) => {
 	schema[pList[len - 1]] = value
 	return obj
 }
+
+/**
+ * Iterage as array in object
+ * @param obj
+ * @param cb
+ * @constructor
+ */
+export function LoopObject<T, K extends keyof T>(obj: T, cb: (val: T[Extract<keyof T, string>], key: string) => void) {
+	for (const key in obj) {
+		cb(obj[key], key)
+	}
+}

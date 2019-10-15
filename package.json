@@ -1,7 +1,7 @@
 {
   "name": "aether-js",
   "description": "Collections helper & mixins for javascript developer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "bucket.js",
   "author": "Jimmy <jackzard@yahoo.com>",
   "license": "MIT",
@@ -10,10 +10,12 @@
     "dev": "rollup -cw",
     "submit": "make publish"
   },
-  "peerDependencies": {
+  "dependencies": {
     "dayjs": "^1.8.16",
-    "rxjs": "^6.5.2",
     "uuid-random": "^1.0.9"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.5.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.0",
