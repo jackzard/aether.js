@@ -1,4 +1,5 @@
 // Helper List
+export * from './array.helper'
 export * from './clone.helper'
 export * from './timeout.helper'
 export * from './infinity-try.helper'
