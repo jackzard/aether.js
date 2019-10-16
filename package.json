@@ -1,7 +1,7 @@
 {
   "name": "aether-js",
   "description": "Collections helper & mixins for javascript developer",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "main": "bucket.js",
   "author": "Jimmy <jackzard@yahoo.com>",
   "license": "MIT",
