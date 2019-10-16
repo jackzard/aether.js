@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Observable, Subscription } from 'rxjs'
 
 export interface IDestroyerMX {

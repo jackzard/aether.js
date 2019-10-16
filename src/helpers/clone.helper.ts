@@ -1,11 +1,11 @@
 /*
 	Deep Clone objects / array
  */
-export function DeepAssign<T>(obj): T {
+export function DeepAssign<T>(obj): T | any {
 	return JSON.parse(JSON.stringify(obj))
 }
 
-export function MergeDeep<T>(target, source): T {
+export function MergeDeep<T>(target, source): T | any {
 	const isObject = (obj) => obj && typeof obj === 'object'
 
 	if (!isObject(target) || !isObject(source)) {
