@@ -4,7 +4,7 @@ import typescript from 'rollup-plugin-typescript2'
 const RollupConfig = (input, output, watch) => {
 	return {
 		input, watch,
-		output: {file: output, format: 'commonjs'},
+		output: {file: output, format: 'cjs'},
 		plugins: [typescript({target:'es5'})]
 	}
 }

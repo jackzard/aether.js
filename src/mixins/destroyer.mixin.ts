@@ -25,7 +25,8 @@ export function Destroyer(destroy_name: string) {
 				if (watch.unsubscribe) watch.unsubscribe()
 			})
 
-			ori_destroy.apply(this, arguments)
+			if (typeof ori_destroy === 'function')
+				ori_destroy.apply(this, arguments)
 		}
 
 	}
