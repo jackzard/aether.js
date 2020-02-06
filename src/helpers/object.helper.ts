@@ -47,3 +47,4 @@ export function LoopObject<T, K extends keyof T>(obj: T, cb: (val: T[Extract<key
 		cb(obj[key], key)
 	}
 }
+

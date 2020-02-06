@@ -1,6 +1,6 @@
 /**
  * Random UUID
  */
-import * as uid from 'uuid-random'
+import uid from 'nanoid'
 
 export const $UID = uid

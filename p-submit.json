@@ -1,0 +1,6 @@
+{
+  "exec": "yarn publish",
+  "folder": "dist",
+  "replacer": {
+  }
+}

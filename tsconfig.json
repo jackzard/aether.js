@@ -4,11 +4,15 @@
     "declarationDir": "./dist",
     "module": "es2015",
     "outDir": "./dist",
-    "target": "es5",
+    "target": "es2020",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "typeRoots": [],
-    "lib": ["es2017", "dom"]
+    "lib": [
+      "es2020",
+      "dom"
+    ]
   },
   "include": [
     "src/**/*"
