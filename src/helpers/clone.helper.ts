@@ -1,29 +1,36 @@
+import klona from 'klona'
+import deepEqual from 'fast-deep-equal'
+
 /*
 	Deep Clone objects / array
  */
-export function DeepAssign<T>(obj): T | any {
-	return JSON.parse(JSON.stringify(obj))
+export function DeepAssign<T = any>(obj: T): T {
+    return klona(obj)
 }
 
-export function MergeDeep<T>(target, source): T | any {
-	const isObject = (obj) => obj && typeof obj === 'object'
+export function DeepEqual<T>(a: T, b: T): boolean {
+    return deepEqual(a, b)
+}
 
-	if (!isObject(target) || !isObject(source)) {
-		return source
-	}
+export function MergeDeep<T>(target: T, source: T): T | any {
+    const isObject = (obj) => obj && typeof obj === 'object'
 
-	Object.keys(source).forEach(key => {
-		const targetValue = target[key]
-		const sourceValue = source[key]
+    if (!isObject(target) || !isObject(source)) {
+        return source
+    }
 
-		if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
-			target[key] = targetValue.concat(sourceValue)
-		} else if (isObject(targetValue) && isObject(sourceValue)) {
-			target[key] = MergeDeep(Object.assign({}, targetValue), sourceValue)
-		} else {
-			target[key] = sourceValue
-		}
-	})
+    Object.keys(source).forEach(key => {
+        const targetValue = target[key]
+        const sourceValue = source[key]
 
-	return target
+        if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
+            target[key] = targetValue.concat(sourceValue)
+        } else if (isObject(targetValue) && isObject(sourceValue)) {
+            target[key] = MergeDeep(Object.assign({}, targetValue), sourceValue)
+        } else {
+            target[key] = sourceValue
+        }
+    })
+
+    return target
 }

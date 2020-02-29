@@ -1,5 +1,5 @@
 /**
  * Detect is browser or not
  */
-export const IsBrowser = typeof window !== 'undefined'
-	&& typeof document !== 'undefined'
+export const IsBrowser: boolean = typeof window !== 'undefined'
+    && typeof document !== 'undefined'

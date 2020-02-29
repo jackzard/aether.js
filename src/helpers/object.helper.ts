@@ -6,13 +6,13 @@
  * @param initial
  * @constructor
  */
-export const NG = (obj = {}, key = '', initial = undefined): any => {
-	const value = key.split('.')
-		.reduce(function (o, x) {
-			return (typeof o === 'undefined' || o === null) ? o : o[x]
-		}, obj)
-	if (typeof value === 'undefined') return initial
-	return value
+export function NG<T = any>(obj = {}, key = '', initial = undefined): T {
+    const value = key.split('.')
+        .reduce(function (o, x) {
+            return (typeof o === 'undefined' || o === null) ? o : o[x]
+        }, obj)
+    if (typeof value === 'undefined') return initial
+    return value
 }
 
 /**
@@ -23,17 +23,17 @@ export const NG = (obj = {}, key = '', initial = undefined): any => {
  * @param value
  * @constructor
  */
-export const NS = (obj: any, path: string, value: any) => {
-	let schema = obj
-	const pList = path.split('.')
-	const len = pList.length
-	for (let i = 0; i < len - 1; i++) {
-		const elem = pList[i]
-		if (!schema[elem]) schema[elem] = {}
-		schema = schema[elem]
-	}
-	schema[pList[len - 1]] = value
-	return obj
+export function NS<T = any>(obj: any, path: string, value: any): T {
+    let schema = obj
+    const pList = path.split('.')
+    const len = pList.length
+    for (let i = 0; i < len - 1; i++) {
+        const elem = pList[i]
+        if (!schema[elem]) schema[elem] = {}
+        schema = schema[elem]
+    }
+    schema[pList[len - 1]] = value
+    return obj
 }
 
 /**
@@ -43,8 +43,8 @@ export const NS = (obj: any, path: string, value: any) => {
  * @constructor
  */
 export function LoopObject<T, K extends keyof T>(obj: T, cb: (val: T[Extract<keyof T, string>], key: string) => void) {
-	for (const key in obj) {
-		cb(obj[key], key)
-	}
+    for (const key in obj) {
+        cb(obj[key], key)
+    }
 }
 
