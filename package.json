@@ -1,7 +1,7 @@
 {
   "name": "aether-js",
   "description": "Collections helper & mixins for javascript developer",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "main": "index.cjs.js",
   "module": "index.js",
   "types": "index.d.ts",
@@ -20,11 +20,11 @@
     }
   },
   "peerDependencies": {
-    "dayjs": "^1.8.21",
+    "dayjs": "^1.8.23",
     "fast-deep-equal": "^3.1.1",
     "is-plain-object": "^3.0.0",
     "klona": "^1.1.1",
-    "nanoid": "^2.1.11",
+    "nanoid": "^3.0.2",
     "rxjs": "^6.5.4"
   },
   "devDependencies": {
@@ -33,8 +33,8 @@
     "@rollup/plugin-typescript": "^2.1.0",
     "cz-conventional-changelog": "^3.1.0",
     "install-peers-cli": "^2.2.0",
-    "rimraf": "^3.0.1",
-    "rollup": "^1.31.0",
-    "typescript": "^3.7.5"
+    "rimraf": "^3.0.2",
+    "rollup": "^2.3.2",
+    "typescript": "^3.8.3"
   }
 }

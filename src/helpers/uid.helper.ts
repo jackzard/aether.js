@@ -1,7 +1,7 @@
 /**
  * Random UUID
  */
-import uid from 'nanoid'
+import {nanoid} from 'nanoid'
 
-export const $UID = uid
-export const UID = uid
+export const $UID = nanoid
+export const UID = nanoid
